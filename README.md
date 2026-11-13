@@ -1,6 +1,6 @@
-# 사장님 AI 가게 매니저
+# ReviewMate (RM)
 
-모바일 우선으로 만든 소상공인용 리뷰·고객·매장 개선 관리 웹앱의 초기 프로젝트입니다.
+모바일 우선으로 만든 소상공인을 위한 리뷰·고객·매장 개선 관리 서비스 ReviewMate의 초기 프로젝트입니다.
 
 ## 1. 포함 기능
 
@@ -95,7 +95,7 @@ SNS 화면의 콘텐츠 초안 작성과 캘린더 저장은 데모로 동작하
 ## 9. 프로젝트 구조
 
 ```text
-sajang-ai-store-manager/
+reviewmate/
 ├── index.html
 ├── styles.css
 ├── app.js
