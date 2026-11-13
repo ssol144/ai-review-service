@@ -80,3 +80,390 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   .sidebar{display:none}.main-area{margin-left:0;padding:0 16px 100px}.topbar{height:60px;margin-bottom:23px}.mobile-brand{display:flex;align-items:center;gap:8px;color:#332d24}.mobile-brand .brand-mark{width:32px;height:32px;font-size:13px}.mobile-brand b{font-size:15px}.breadcrumbs{display:none}.top-actions{gap:10px}.today-label{display:none}
   .page-heading{margin-bottom:20px}.page-heading h1{font-size:25px}.subheading{font-size:12px;line-height:1.65}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric-card{padding:13px;min-height:98px}.metric-value{font-size:26px}.dashboard-columns,.dashboard-bottom,.analysis-grid{grid-template-columns:1fr;gap:11px}.panel{padding:16px}.panel-heading h3{font-size:15px}.notice-strip{align-items:flex-start;flex-wrap:wrap;font-size:11px}.notice-strip .text-button{margin-left:auto}.page-heading.simple{align-items:flex-start}.page-heading.simple>.button,.page-heading.simple>.period-pill{margin-top:4px}.review-card{padding:14px}.review-card-top{align-items:flex-start;gap:8px}.review-meta{flex-wrap:wrap}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.mobile-nav{left:10px;right:10px;bottom:calc(9px + env(safe-area-inset-bottom));height:64px;border-radius:17px}.mobile-nav button.active{font-weight:700}
 }
+
+
+/* ReviewMate Blue & Black edition — same layout and interactions */
+:root{
+  --paper:#f6f8fb;
+  --white:#ffffff;
+  --ink:#171d29;
+  --muted:#7f8999;
+  --line:#e7ebf1;
+  --soft:#edf3fb;
+  --accent:#3978d5;
+  --red:#dc625f;
+  --green:#438b69;
+  --radius:18px;
+}
+html,body{background:#f6f8fb;color:#171d29}
+body{font-family:"Noto Sans KR",sans-serif}
+button,input,select,textarea{font-family:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #3978d5;outline-offset:3px}
+.app-shell{background:linear-gradient(180deg,#f8faff 0%,#f4f7fb 100%)}
+.sidebar{background:#fff;border-right:1px solid #e8edf4;box-shadow:5px 0 24px rgba(23,39,65,.025)}
+.brand-mark{background:#172235;color:#fff;box-shadow:none}
+.brand small{color:#929cad}
+.store-switch{background:#f7f9fc;border:1px solid #e9eef5}
+.store-dot,.status-dot{background:#3978d5}
+.nav-item{color:#687487}
+.nav-item i{color:#8995a7}
+.nav-item.active,.nav-item:hover{background:#edf3fc;color:#1e4f91}
+.nav-item.active i{color:#3978d5}
+.nav-item em{background:#fff0ef;color:#c65350}
+.pro-tag{border-color:#dce6f4;color:#426da9;background:#f5f8fd}
+.upgrade-mini{background:#f3f7fd;border:1px solid #e4ebf5}
+.tiny-crown{color:#3978d5}
+.upgrade-mini b{color:#26364d}
+.upgrade-mini p{color:#7f8b9d}
+.button{border-radius:11px}
+.button-dark{background:#172235;color:#fff;box-shadow:0 3px 8px rgba(18,31,51,.12)}
+.button-dark:hover{background:#263b59}
+.button-light{background:#fff;color:#30445f;border-color:#e2e9f2}
+.button-outline{border-color:#dce4ef;color:#43536a;background:#fff}
+.main-area{color:#171d29}
+.topbar{border-bottom:1px solid #e8edf3}
+.breadcrumbs,.today-label{color:#8994a5}
+.icon-button{color:#536176}
+.notice-dot{background:#e06460}
+.avatar{background:#edf3fc;border:1px solid #dfe8f4;color:#294d7d}
+.eyebrow{color:#8190a5}
+.page-heading h1,.section-head h2,.panel h3,.insight-box h4,.sns-teaser h3{font-family:"Noto Sans KR",sans-serif}
+.page-heading h1{color:#182233}
+.page-heading h1 span{color:#3978d5}
+.subheading{color:#7c8798}
+.heading-date{color:#758196}
+.date-label{color:#98a3b3}
+.notice-strip{background:#eef4fc;border:1px solid #e0eaf7;color:#304a6e}
+.notice-icon{background:#3978d5;color:#fff}
+.notice-strip strong{color:#c65350}
+.text-button{color:#326fc4}
+.text-button:hover{color:#1d559f}
+.section-head h2,.panel h3{color:#202b3c}
+.metric-grid{gap:12px}
+.metric-card{background:#fff;border:1px solid #e8edf3;box-shadow:0 3px 12px rgba(25,43,69,.025)}
+.metric-label{color:#8490a1}
+.metric-value{color:#172235}
+.metric-unit{color:#8995a5}
+.positive{color:#438b69}
+.muted{color:#929cac}
+.panel{background:#fff;border:1px solid #e8edf3;box-shadow:0 4px 15px rgba(25,43,69,.025)}
+.compact-review{border-top:1px solid #edf0f5}
+.review-meta{color:#929cac}
+.stars{color:#e9ad42}
+.review-text{color:#536074}
+.tag{background:#f0f3f7;color:#657287}
+.tag.alert{background:#fff0ef;color:#bf5753}
+.tag.good{background:#edf6f0;color:#4e805e}
+.insight-box{background:#f1f6fd;border:1px solid #e3edf9}
+.insight-kicker{color:#3978d5}
+.insight-box h4{color:#24344b}
+.insight-box p{color:#68778c}
+.insight-foot{color:#929eae}
+.period-pill{background:#f1f5fb;color:#5d7392;border:1px solid #e3eaf4}
+.bar-chart{border-color:#e8edf3}
+.bar-col i{background:#a9c5ed;border-radius:5px 5px 0 0}
+.bar-col:nth-child(6) i{background:#3978d5}
+.legend-dot{background:#3978d5}
+.sns-teaser{background:#edf3fc;border:1px solid #e0e9f5}
+.sns-teaser h3{color:#26364d}
+.sns-teaser p:not(.eyebrow){color:#718096}
+.social-symbols span{border-color:#d8e3f1;color:#3978d5}
+.filter-chip{border:1px solid #e4eaf2;background:#fff;color:#7b8799}
+.filter-chip.selected{background:#eaf2fd;border-color:#cbdcf3;color:#245a9f}
+.review-card{background:#fff;border:1px solid #e8edf3;box-shadow:0 3px 12px rgba(25,43,69,.025)}
+.review-card p{color:#536074}
+.review-card .reply-box{background:#f3f7fc;border:1px solid #e5edf7}
+.reply-box textarea{border:1px solid #dfe7f1;background:#fff;color:#263449}
+.customer-avatar{background:#eaf2fc;color:#315f9d}
+.customer-row,.task-row{border-color:#e9eef4}
+.privacy-note{color:#8c98a8}
+.keyword-list span{background:#edf3fc;border:1px solid #e1eaf6;color:#45658e}
+.keyword-list.negative span{background:#fff0ef;border-color:#f3dedd;color:#a75b59}
+.recommendation{background:#f1f6fd;border-color:#e1ebf7}
+.recommendation h3{color:#24344b}
+.recommendation p{color:#68778c}
+.chat-wrap,.chat-messages{background:#fff}
+.chat-bubble.ai{background:#eef4fc;border:1px solid #e0eaf7;color:#304968}
+.chat-bubble.user{background:#172235;color:#fff}
+.chat-input input,.dialog-field{background:#fff;border:1px solid #e1e8f0;color:#263449}
+.app-dialog{border:1px solid #e4eaf2;box-shadow:0 20px 70px rgba(20,34,55,.18)}
+.field-label{color:#718096}
+.footer{border-color:#e8edf3;color:#98a3b2}
+.mobile-nav{background:rgba(255,255,255,.96);border:1px solid #e5ebf3;box-shadow:0 8px 28px rgba(24,40,64,.10);backdrop-filter:blur(14px)}
+.mobile-nav button{color:#8995a6}
+.mobile-nav button.active{color:#1f5da8}
+.mobile-nav button.active i{color:#3978d5}
+.toast{background:#172235;color:#fff}
+.empty-state{color:#8e9aaa}
+@media(max-width:760px){
+  .mobile-brand{color:#172235}
+}
+
+
+/* ReviewMate plan and channel coupon management */
+.pricing-panel .setting-plan {display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid #e1e7f0}
+.pricing-panel .setting-plan:last-of-type {border-bottom:0}
+.pricing-panel .setting-plan span {display:flex;flex-direction:column;gap:4px}
+.pricing-panel .setting-plan span b {color:#172b4d}
+.pricing-panel .setting-plan small {color:#7f8999;font-size:12px;line-height:1.5}
+.pricing-panel .setting-plan strong {color:#111827;white-space:nowrap}
+.pricing-panel .setting-plan.featured {margin:0 -12px;padding:15px 12px;background:#edf3fb;border-radius:10px}
+#page-coupons .coupon-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}
+#page-coupons .coupon-stat{background:#fff;border:1px solid #e1e7f0;border-radius:14px;padding:18px}
+#page-coupons .coupon-stat small{display:block;color:#7f8999}
+#page-coupons .coupon-stat strong{display:block;font-size:25px;color:#111827;margin-top:6px}
+#page-coupons .coupon-stat em{font-style:normal;color:#3978d5;font-size:12px}
+#page-coupons .coupon-create-banner{display:flex;align-items:center;justify-content:space-between;gap:20px;background:#172b4d;color:#fff;margin-bottom:20px}
+#page-coupons .coupon-create-banner h3{color:#fff;margin:4px 0}
+#page-coupons .coupon-create-banner p:not(.eyebrow){color:#c0d0e5;margin:0}
+#page-coupons .coupon-create-banner .eyebrow{color:#80b4ff}
+#page-coupons .coupon-platforms{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0}
+#page-coupons .platform-card{background:#fff;border:1px solid #e1e7f0;border-radius:12px;padding:13px;min-width:0}
+#page-coupons .platform-card b{display:block;color:#172b4d;font-size:13px}
+#page-coupons .platform-card small{display:block;color:#7f8999;font-size:11px;margin-top:5px;line-height:1.45}
+#page-coupons .platform-card em{display:inline-block;margin-top:8px;font-style:normal;font-size:10px;color:#9a681e;background:#fff4e5;padding:4px 7px;border-radius:20px}
+#page-coupons .coupon-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0}
+#page-coupons .coupon-search{max-width:260px;width:100%;padding:11px 13px;border:1px solid #dce4ef;border-radius:10px;background:#fff;color:#263449}
+#page-coupons .coupon-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#page-coupons .coupon-card{background:#fff;border:1px solid #e1e7f0;border-radius:15px;padding:18px;box-shadow:0 4px 14px rgba(17,35,60,.035)}
+#page-coupons .coupon-card-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+#page-coupons .coupon-kind{font-size:11px;font-weight:700;color:#3978d5;background:#eaf2fd;padding:5px 9px;border-radius:20px}
+#page-coupons .coupon-state{font-size:11px;font-weight:700;padding:5px 9px;border-radius:20px;background:#edf6f0;color:#438b69}
+#page-coupons .coupon-state.ended,#page-coupons .coupon-state.paused{background:#f0f2f5;color:#778397}
+#page-coupons .coupon-state.scheduled{background:#fff4e5;color:#a76a1c}
+#page-coupons .coupon-card h3{margin:13px 0 3px;color:#111827;font-size:17px}
+#page-coupons .coupon-discount{font-size:24px;font-weight:800;color:#172b4d}
+#page-coupons .coupon-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0;color:#68778c;font-size:12px}
+#page-coupons .coupon-progress{height:7px;background:#edf1f6;border-radius:20px;overflow:hidden}
+#page-coupons .coupon-progress span{display:block;height:100%;background:#3978d5;border-radius:20px}
+#page-coupons .coupon-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:13px;gap:8px;flex-wrap:wrap}
+#page-coupons .coupon-code{font:600 12px monospace;color:#52647e;background:#f4f7fc;padding:6px 8px;border-radius:7px}
+#page-coupons .coupon-actions{display:flex;gap:6px;flex-wrap:wrap}
+#page-coupons .coupon-actions button,#page-coupons .coupon-log-action{border:1px solid #dce4ef;background:#fff;color:#40516a;border-radius:8px;padding:6px 9px;font-size:11px}
+#page-coupons .coupon-actions button.danger{color:#c65350}
+#page-coupons .coupon-actions button:disabled{opacity:.4;cursor:not-allowed}
+#page-coupons .coupon-history-panel{margin-top:22px}
+#page-coupons .coupon-table{width:100%;border-collapse:collapse;font-size:12px}
+#page-coupons .coupon-table th,#page-coupons .coupon-table td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf0f5;white-space:nowrap}
+#page-coupons .coupon-table th{color:#8994a5;font-weight:600}
+#page-coupons .coupon-table td{color:#536074}
+#page-coupons .coupon-empty{grid-column:1/-1;text-align:center;padding:36px;color:#8994a5;background:#fff;border:1px dashed #dce4ef;border-radius:14px}
+#page-coupons .coupon-note{padding:13px 15px;background:#eaf2fd;border:1px solid #d6e5f8;border-radius:12px;color:#52647e;font-size:12px;line-height:1.65;margin:16px 0}
+#page-coupons .coupon-dialog{width:min(620px,calc(100% - 28px));max-height:90vh;overflow:auto;border:0;border-radius:18px;padding:0;box-shadow:0 20px 70px rgba(17,35,60,.24)}
+#page-coupons .coupon-dialog::backdrop{background:rgba(17,24,39,.58)}
+#page-coupons .coupon-dialog-inner{padding:24px}
+#page-coupons .coupon-dialog h2{margin:0 0 5px;color:#111827}
+#page-coupons .coupon-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#page-coupons .coupon-field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+#page-coupons .coupon-field.full{grid-column:1/-1}
+#page-coupons .coupon-field label{font-size:12px;font-weight:700;color:#536074}
+#page-coupons .coupon-field input,#page-coupons .coupon-field select,#page-coupons .coupon-field textarea{width:100%;padding:10px 11px;border:1px solid #dce4ef;border-radius:9px;background:#fff;color:#263449}
+#page-coupons .coupon-field textarea{min-height:65px;resize:vertical}
+#page-coupons .coupon-dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+#page-coupons .coupon-dialog-x{float:right;border:0;background:none;font-size:24px;color:#7f8999;cursor:pointer}
+#page-coupons .coupon-alert{font-size:11px;color:#8994a5;margin-top:12px;line-height:1.6}
+@media(max-width:800px){#page-coupons .coupon-stats{grid-template-columns:repeat(2,minmax(0,1fr))}#page-coupons .coupon-list{grid-template-columns:1fr}#page-coupons .coupon-toolbar{align-items:stretch;flex-direction:column}#page-coupons .coupon-search{max-width:none}#page-coupons .coupon-create-banner{align-items:flex-start;flex-direction:column}#page-coupons .coupon-platforms{grid-template-columns:repeat(2,minmax(0,1fr))}#page-coupons .coupon-log-wrap{overflow-x:auto}}
+@media(max-width:480px){#page-coupons .coupon-form-grid{grid-template-columns:1fr}#page-coupons .coupon-field.full{grid-column:auto}#page-coupons .coupon-stat{padding:14px}#page-coupons .coupon-stat strong{font-size:22px}.pricing-panel .setting-plan{align-items:flex-start;flex-direction:column}}
+
+
+/* ==========================================
+   ReviewMate - Warm Yellow Identity
+   CSS-only theme refresh
+   ========================================== */
+:root{
+  --paper:#FFF9E9;
+  --white:#FFFFFF;
+  --ink:#29251D;
+  --muted:#8A8171;
+  --line:#EFE4CC;
+  --soft:#FFF1C9;
+  --accent:#E7AE32;
+  --red:#C65D50;
+  --green:#64845D;
+  --radius:18px;
+}
+html,body,.app-shell{background:var(--paper);color:var(--ink)}
+body{font-family:"Noto Sans KR","Arial Rounded MT Bold",sans-serif}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #D99B1E;outline-offset:3px}
+
+/* Wordmark: playful rounded lettering, transparent/no logo tile */
+.brand{gap:10px;color:#29251D;padding-bottom:26px}
+.brand-mark{
+  width:auto;height:auto;min-width:0;padding:0;border:0;border-radius:0;
+  display:block;background:transparent;color:#D99B1E;
+  font-family:"Arial Rounded MT Bold","Trebuchet MS",sans-serif;
+  font-size:27px;font-weight:1000;letter-spacing:-2px;line-height:1;
+  transform:rotate(-5deg);
+}
+.brand b{
+  color:#29251D;font-family:"Arial Rounded MT Bold","Trebuchet MS",sans-serif;
+  font-size:19px;font-weight:1000;letter-spacing:-1.15px;line-height:1.05;
+}
+.brand small{color:#9A8968;font-size:8px;letter-spacing:1.5px;font-weight:700}
+
+/* Sidebar and navigation */
+.sidebar{background:#FFF3D4;border-right:1px solid #ECDDAD;box-shadow:5px 0 22px rgba(92,67,18,.045)}
+.store-switch{background:#FFFBF1;border-color:#E9DDBF}
+.store-switch b{color:#29251D}
+.store-switch small,.chevron{color:#93866E}
+.store-dot,.status-dot{background:#DDA52B}
+.nav-item{color:#71664F}
+.nav-item i{color:#A58A50}
+.nav-item.active,.nav-item:hover{background:#F3D47F;color:#33270D}
+.nav-item.active i{color:#33270D}
+.nav-item em{background:#F6E0D9;color:#A94E43}
+.pro-tag{background:#FFF0BD;border-color:#E6C66E;color:#8A6415}
+.upgrade-mini{background:#FFF9E9;border-color:#E8D7A9}
+.upgrade-mini b{color:#3A2D12}
+.upgrade-mini p{color:#887B60}
+.tiny-crown{color:#D39A1E}
+.side-foot{border-color:#E8DDBF;color:#9A8D73}
+
+/* Buttons */
+.button{border-radius:12px;transition:transform .18s ease,background .18s ease}
+.button:hover{transform:translateY(-1px)}
+.button-dark{background:#29251D;color:#FFF;border-color:#29251D;box-shadow:0 4px 10px rgba(62,46,15,.12)}
+.button-dark:hover{background:#51432A}
+.button-light,.button-outline{background:#FFFDF7;color:#51442B;border-color:#E8DDBF}
+.button-outline:hover,.button-light:hover{background:#FFF1C9}
+
+/* Header and headings */
+.topbar{border-color:#ECDDAD}
+.breadcrumbs,.today-label{color:#998B70}
+.icon-button{color:#3A3020}
+.avatar{background:#F8E8B7;border-color:#EAD69C;color:#6F5012}
+.notice-dot{background:#C65D50}
+.eyebrow{color:#A17A27}
+.page-heading h1,.section-head h2,.panel h3{color:#29251D}
+.page-heading h1 span{color:#D69D24;border:0}
+.subheading{color:#8A806F}
+
+/* Notices and alerts */
+.notice-strip{background:#FFF1C9;border:1px solid #F0DFAE;color:#5B481E}
+.notice-icon{background:#E4AD32;color:#30240D;border-radius:9px}
+.notice-strip strong{color:#B74F43}
+.text-button{color:#B17B13}
+
+/* Metric cards */
+.metric-card{background:#FFF;border:1px solid #EFE4CC;border-top:3px solid #E7AE32;border-radius:15px;box-shadow:0 5px 16px rgba(89,67,22,.045)}
+.metric-card:nth-child(2){border-top-color:#C99025}
+.metric-card:nth-child(3){border-top-color:#D8C18D}
+.metric-card:nth-child(4){border-top-color:#B8A477}
+.metric-label,.metric-unit{color:#968A75}
+.metric-value{color:#29251D;font-weight:800}
+.positive{color:#64845D}
+
+/* Panels and reviews */
+.panel,.review-card{background:#FFF;border:1px solid #EFE4CC;border-radius:16px;box-shadow:0 5px 16px rgba(89,67,22,.035)}
+.panel h3,.section-head h2{color:#29251D}
+.review-text,.review-card p{color:#625A4D}
+.stars{color:#E3A62B}
+.tag{background:#F5F0E5;color:#76684D}
+.tag.alert{background:#FCECE8;color:#B65348}
+.tag.good{background:#EEF4E9;color:#5C7D52}
+.review-card .reply-box{background:#FFFAEE;border:1px solid #F0E3C5;border-radius:12px}
+.reply-box textarea{background:#FFF;border-color:#E8DDBF;color:#443A29}
+
+/* AI insights and charts */
+.insight-box,.recommendation{background:#FFF4D8;border:1px solid #F0DFAE;border-radius:14px}
+.insight-kicker{color:#B17B13}
+.insight-box h4,.recommendation h3{color:#4D3A12}
+.insight-box p,.recommendation p{color:#786B53}
+.period-pill{background:#FFF1C9;border:1px solid #F0DFAE;color:#8C671B}
+.bar-chart{border-color:#EFE4CC}
+.bar-col i{background:#F0D58F;border-radius:5px 5px 0 0}
+.bar-col:nth-child(6) i{background:#D9A52C}
+.legend-dot{background:#D9A52C}
+
+/* SNS banner */
+.sns-teaser,.sns-plan{background:#4B3A1B;border:1px solid #6B5324;border-radius:16px;color:#FFF}
+.sns-teaser h3,.sns-plan h2{color:#FFF}
+.sns-teaser p:not(.eyebrow),.sns-plan p:not(.eyebrow){color:#F0E2C1}
+.sns-teaser .eyebrow,.sns-plan .eyebrow{color:#F4CF70}
+.sns-teaser .button-dark{background:#E5AD32;border-color:#E5AD32;color:#30240D}
+.social-symbols span,.sns-icons span{border-color:#A58B54;color:#F4D47F}
+
+/* Filters, customers and tasks */
+.filter-chip{background:#FFFDF7;border-color:#E8DDBF;color:#81745D}
+.filter-chip.selected{background:#E7AE32;border-color:#E7AE32;color:#33270D}
+.customer-avatar{background:#FFF1C9;color:#8C671B}
+.customer-row,.task-row{border-color:#EFE4CC}
+.keyword-list span{background:#FFF1C9;border-color:#F0DFAE;color:#8C671B;border-radius:9px}
+.keyword-list.negative span{background:#FCECE8;border-color:#F2D9D2;color:#A75B50}
+
+/* Assistant and forms */
+.chat-wrap,.chat-messages{background:#FFF}
+.ai-avatar{background:#FFF1C9;color:#B17B13}
+.chat-bubble.ai{background:#FFF4D8;border:1px solid #F0DFAE;color:#51442B}
+.chat-bubble.user{background:#29251D;color:#FFF}
+.chat-input input,.dialog-field,.sns-grid input,.sns-grid select,.sns-grid textarea,.settings-panel input{
+  background:#FFFDF8;border-color:#E8DDBF;color:#443A29
+}
+.field-label{color:#76684F}
+.calendar-item{background:#FFF1C9;color:#51442B}
+.setting-plan{border-color:#EFE4CC}
+
+/* Dialogs and utility states */
+.app-dialog{border-color:#E8DDBF;box-shadow:0 20px 70px rgba(72,53,15,.18)}
+.app-dialog::backdrop{background:rgba(48,38,19,.48)}
+.footer{border-color:#EFE4CC;color:#998B70}
+.privacy-note,.empty-state{color:#998B70}
+.mobile-nav{background:#FFF3D4;border:1px solid #ECDDAD;box-shadow:0 8px 28px rgba(72,53,15,.16)}
+.mobile-nav button{color:#887653}
+.mobile-nav button.active,.mobile-nav button.active i{color:#B17B13}
+.toast{background:#332B1B;color:#FFF;border:1px solid #6E592E}
+
+/* Subscription pricing */
+.pricing-panel .setting-plan{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid #EFE4CC}
+.pricing-panel .setting-plan:last-of-type{border-bottom:0}
+.pricing-panel .setting-plan span{display:flex;flex-direction:column;gap:4px}
+.pricing-panel .setting-plan span b{color:#51401C}
+.pricing-panel .setting-plan small{color:#8A806F;font-size:12px;line-height:1.5}
+.pricing-panel .setting-plan strong{color:#29251D;white-space:nowrap}
+.pricing-panel .setting-plan.featured{margin:0 -12px;padding:15px 12px;background:#FFF4D8;border-radius:10px}
+
+/* Channel coupon manager */
+#page-coupons .coupon-stat{background:#FFF;border:1px solid #EFE4CC}
+#page-coupons .coupon-stat small{color:#8A806F}
+#page-coupons .coupon-stat strong{color:#29251D}
+#page-coupons .coupon-stat em{color:#B17B13}
+#page-coupons .coupon-create-banner{background:#4B3A1B;color:#FFF;border:1px solid #6B5324}
+#page-coupons .coupon-create-banner h3{color:#FFF}
+#page-coupons .coupon-create-banner p:not(.eyebrow){color:#F0E2C1}
+#page-coupons .coupon-create-banner .eyebrow{color:#F4CF70}
+#page-coupons .platform-card{background:#FFFDF7;border-color:#EFE4CC}
+#page-coupons .platform-card b{color:#51401C}
+#page-coupons .platform-card small{color:#8A806F}
+#page-coupons .platform-card em{color:#8A6415;background:#FFF1C9}
+#page-coupons .coupon-search{border-color:#E8DDBF;background:#FFFDF8;color:#443A29}
+#page-coupons .coupon-card{background:#FFF;border-color:#EFE4CC;box-shadow:0 5px 16px rgba(89,67,22,.035)}
+#page-coupons .coupon-kind{color:#8C671B;background:#FFF1C9}
+#page-coupons .coupon-state{background:#EEF4E9;color:#5C7D52}
+#page-coupons .coupon-state.ended,#page-coupons .coupon-state.paused{background:#F2EFE8;color:#81745D}
+#page-coupons .coupon-state.scheduled{background:#FFF1D9;color:#A36D17}
+#page-coupons .coupon-card h3{color:#29251D}
+#page-coupons .coupon-discount{color:#9A6B12}
+#page-coupons .coupon-meta{color:#766B58}
+#page-coupons .coupon-progress{background:#F4EEDC}
+#page-coupons .coupon-progress span{background:#E2AA2E}
+#page-coupons .coupon-code{color:#76684D;background:#FFF7E5}
+#page-coupons .coupon-actions button,#page-coupons .coupon-log-action{border-color:#E8DDBF;background:#FFFDF7;color:#655638}
+#page-coupons .coupon-actions button.danger{color:#B65348}
+#page-coupons .coupon-table th,#page-coupons .coupon-table td{border-color:#F1E8D6}
+#page-coupons .coupon-table th{color:#998B70}
+#page-coupons .coupon-table td{color:#625A4D}
+#page-coupons .coupon-empty{color:#998B70;background:#FFFDF7;border-color:#E8DDBF}
+#page-coupons .coupon-note{background:#FFF4D8;border-color:#F0DFAE;color:#76633E}
+#page-coupons .coupon-dialog{box-shadow:0 20px 70px rgba(72,53,15,.22)}
+#page-coupons .coupon-dialog-inner{background:#FFFDF8}
+#page-coupons .coupon-dialog h2{color:#29251D}
+#page-coupons .coupon-field label{color:#76684F}
+#page-coupons .coupon-field input,#page-coupons .coupon-field select,#page-coupons .coupon-field textarea{border-color:#E8DDBF;background:#FFF;color:#443A29}
+#page-coupons .coupon-dialog-x{color:#8A806F}
+#page-coupons .coupon-alert{color:#998B70}
+
+/* Responsive */
+@media(max-width:800px){
+  .sidebar{background:#FFF3D4}
+  .mobile-nav{background:#FFF3D4}
+}
