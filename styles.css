@@ -4129,7 +4129,7 @@ textarea:focus-visible {
   height: auto;
   object-fit: contain;
   display: block;
-} */
+}*/
 
 /* 모바일 전용 로고 크기 및 위치 */
 @media (max-width: 768px) {
@@ -4147,5 +4147,65 @@ textarea:focus-visible {
     height: auto !important;
     margin: 0 !important;
     object-fit: contain;
+  }
+}
+
+/* ReviewMate responsive logo: show exactly one logo at every viewport.
+   Desktop uses the sidebar; compact layouts use the top bar. */
+.brand {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 0 8px 24px;
+}
+.brand img {
+  display: block;
+  width: min(100%, 172px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.mobile-brand {
+  display: none !important;
+}
+.mobile-brand img {
+  display: block;
+  width: clamp(128px, 38vw, 168px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    display: none !important;
+  }
+  .main-area {
+    margin-left: 0 !important;
+    width: 100%;
+    min-width: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mobile-brand {
+    display: flex !important;
+    align-items: center;
+    flex: 0 1 auto;
+    width: auto;
+    min-width: 0;
+    margin-right: auto;
+    padding: 0;
+    text-decoration: none;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 0;
+  }
+  .top-actions {
+    flex: 0 0 auto;
   }
 }
