@@ -4083,6 +4083,7 @@ textarea:focus-visible {
   margin: -2px 0 10px;
   font-size: 11px;
 }
+
 .review-reply-head {
   display: flex;
   align-items: center;
@@ -4090,6 +4091,7 @@ textarea:focus-visible {
   gap: 8px;
   margin-bottom: 8px;
 }
+
 .review-card .reply-box textarea {
   display: block;
   width: 100%;
@@ -4102,6 +4104,7 @@ textarea:focus-visible {
   font-size: 13px;
   line-height: 1.65;
 }
+
 .reply-help {
   display: block;
   margin-top: 8px;
@@ -4109,6 +4112,21 @@ textarea:focus-visible {
   font-size: 10px;
   line-height: 1.5;
 }
+
 .review-card .reply-box .button-row {
   margin-top: 10px;
+}
+
+/* 모바일 로고 */
+.mobile-brand {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-brand img {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
