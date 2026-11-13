@@ -4117,7 +4117,7 @@ textarea:focus-visible {
   margin-top: 10px;
 }
 
-/* 모바일 로고 */
+/* 모바일 로고 
 .mobile-brand {
   display: flex;
   align-items: center;
@@ -4129,4 +4129,23 @@ textarea:focus-visible {
   height: auto;
   object-fit: contain;
   display: block;
+} */
+
+/* 모바일 전용 로고 크기 및 위치 */
+@media (max-width: 768px) {
+  .mobile-brand {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  .mobile-brand img {
+    width: 150px !important;
+    max-width: 150px !important;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: contain;
+  }
 }
