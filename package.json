@@ -1,0 +1,12 @@
+{
+  "name": "sajang-ai-store-manager",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "devDependencies": {
+    "vercel": "^65.15.0"
+  }
+}

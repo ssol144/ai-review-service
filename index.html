@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="리뷰부터 고객 관리, 매장 개선까지 돕는 사장님 AI 가게 매니저">
+  <title>사장님 AI 가게 매니저</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="주 메뉴">
+      <a class="brand" href="#" data-page="dashboard"><span class="brand-mark">S.</span><span><b>사장님</b><small>AI STORE MANAGER</small></span></a>
+      <div class="store-switch"><span class="store-dot"></span><span><b id="storeNameSide">우리동네 김밥집</b><small>내 매장</small></span><span class="chevron">⌄</span></div>
+      <nav class="side-nav">
+        <button class="nav-item active" data-page="dashboard"><i>⌂</i>대시보드</button>
+        <button class="nav-item" data-page="reviews"><i>▤</i>리뷰 관리 <em id="reviewBadge">3</em></button>
+        <button class="nav-item" data-page="customers"><i>♙</i>고객 관리</button>
+        <button class="nav-item" data-page="analytics"><i>◫</i>매장 분석</button>
+        <button class="nav-item" data-page="tasks"><i>✓</i>개선 과제</button>
+        <button class="nav-item" data-page="assistant"><i>✳</i>AI 상담 비서</button>
+        <button class="nav-item" data-page="sns"><i>↗</i>SNS 마케팅 <span class="pro-tag">PRO</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="upgrade-mini"><span class="tiny-crown">♛</span><b>SNS로 매장을 더 알려보세요</b><p>AI 콘텐츠 제작 기능을 만나보세요.</p><button data-page="sns" class="button button-light button-small">기능 살펴보기</button></div>
+        <button class="nav-item" data-page="settings"><i>⚙</i>설정</button>
+        <div class="side-foot">사장님의 시간은 장사에,<br>매장 관리는 AI에게.</div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">S.</span><b>사장님 AI 가게 매니저</b></div>
+        <div class="breadcrumbs" id="breadcrumbs">오늘의 매장 현황</div>
+        <div class="top-actions"><span class="today-label" id="todayLabel"></span><button class="icon-button" id="noticeBtn" aria-label="알림">♧<i class="notice-dot"></i></button><button class="avatar" data-page="settings" aria-label="설정">사</button></div>
+      </header>
+
+      <section class="page active" id="page-dashboard">
+        <div class="page-heading">
+          <div><p class="eyebrow">YOUR STORE, IN GOOD HANDS</p><h1>오늘도 수고하셨어요,<br><span id="ownerGreeting">사장님</span>.</h1><p class="subheading">리뷰와 고객 관리는 AI에게 맡기고, 장사에 집중하세요.</p></div>
+          <div class="heading-date"><span class="date-label">TODAY</span><b id="dateLarge"></b></div>
+        </div>
+        <div class="notice-strip"><span class="notice-icon">!</span><span><b>오늘 확인할 리뷰가 있어요.</b> 별점 3점 이하 리뷰 <strong id="lowReviewCount">1건</strong></span><button class="text-button" data-page="reviews">바로 확인 <span>→</span></button></div>
+        <div class="section-head"><div><p class="eyebrow">STORE OVERVIEW</p><h2>오늘의 매장 현황</h2></div><button class="text-button" data-page="analytics">상세 분석 <span>→</span></button></div>
+        <div class="metric-grid">
+          <article class="metric-card"><span class="metric-label">평균 평점</span><div class="metric-value">4.7<span class="metric-unit"> / 5.0</span></div><small class="positive">지난달보다 +0.1</small></article>
+          <article class="metric-card"><span class="metric-label">이번 달 리뷰</span><div class="metric-value">128<span class="metric-unit">건</span></div><small class="positive">지난달보다 +12%</small></article>
+          <article class="metric-card"><span class="metric-label">답글 대기</span><div class="metric-value" id="pendingMetric">3<span class="metric-unit">건</span></div><small class="muted">확인 후 답글 작성</small></article>
+          <article class="metric-card"><span class="metric-label">단골 고객</span><div class="metric-value">86<span class="metric-unit">명</span></div><small class="positive">지난달보다 +8%</small></article>
+        </div>
+        <div class="dashboard-columns">
+          <section class="panel review-panel"><div class="panel-heading"><div><p class="eyebrow">NEEDS ATTENTION</p><h3>먼저 확인할 리뷰</h3></div><button class="text-button" data-page="reviews">전체 보기 →</button></div><div id="dashboardReviews" class="compact-reviews"></div></section>
+          <section class="panel insight-panel"><div class="panel-heading"><div><p class="eyebrow">AI INSIGHT</p><h3>AI가 발견한 개선 포인트</h3></div><span class="sparkle">✳</span></div><div class="insight-box"><span class="insight-kicker">반복 불만 감지</span><h4>포장 관련 의견을 확인해 보세요.</h4><p>최근 리뷰에서 포장 상태에 대한 언급이 반복되고 있어요. 포장 용기와 밀봉 상태를 점검해 보세요.</p><button class="text-button" data-page="tasks">개선 과제 만들기 →</button></div><div class="insight-foot"><span class="status-dot"></span>리뷰 데이터 기반 제안 · 샘플 분석</div></section>
+        </div>
+        <div class="dashboard-bottom">
+          <section class="panel chart-panel"><div class="panel-heading"><div><p class="eyebrow">CUSTOMER VOICE</p><h3>고객 반응 요약</h3></div><span class="period-pill">최근 7일</span></div><div class="bar-chart" aria-label="최근 7일 리뷰 반응"><div class="bar-col"><i style="height:44%"></i><small>월</small></div><div class="bar-col"><i style="height:62%"></i><small>화</small></div><div class="bar-col"><i style="height:52%"></i><small>수</small></div><div class="bar-col"><i style="height:74%"></i><small>목</small></div><div class="bar-col"><i style="height:66%"></i><small>금</small></div><div class="bar-col"><i style="height:88%"></i><small>토</small></div><div class="bar-col"><i style="height:70%"></i><small>일</small></div></div><div class="chart-legend"><span><i class="legend-dot dark"></i>리뷰 언급량</span><span class="muted">샘플 데이터</span></div></section>
+          <section class="sns-teaser"><div><span class="pro-tag">OPTIONAL ADD-ON</span><p class="eyebrow">AI SOCIAL MANAGER</p><h3>리뷰를 홍보 콘텐츠로<br>바꿔보세요.</h3><p>인스타그램과 스레드에 어울리는<br>게시글을 AI가 작성해 드려요.</p><button class="button button-dark" data-page="sns">SNS 기능 보기 <span>→</span></button></div><div class="social-symbols"><span>◎</span><span>@</span></div></section>
+        </div>
+      </section>
+
+      <section class="page" id="page-reviews">
+        <div class="page-heading simple"><div><p class="eyebrow">REVIEW MANAGEMENT</p><h1>리뷰 관리</h1><p class="subheading">고객의 목소리를 놓치지 않고, 진심을 담아 답변하세요.</p></div><button class="button button-dark" id="addReviewBtn">+ 리뷰 추가</button></div>
+        <div class="filter-row"><button class="filter-chip selected" data-filter="all">전체</button><button class="filter-chip" data-filter="low">부정 리뷰</button><button class="filter-chip" data-filter="pending">답글 대기</button><button class="filter-chip" data-filter="done">답글 완료</button></div>
+        <div id="reviewList" class="review-list"></div>
+      </section>
+
+      <section class="page" id="page-customers">
+        <div class="page-heading simple"><div><p class="eyebrow">CUSTOMER CARE</p><h1>고객 관리</h1><p class="subheading">다시 찾아주시는 고객을 기억하고 세심하게 챙겨보세요.</p></div><button class="button button-dark" id="addCustomerBtn">+ 고객 메모</button></div>
+        <div class="metric-grid two"><article class="metric-card"><span class="metric-label">등록 고객</span><div class="metric-value">86<span class="metric-unit">명</span></div></article><article class="metric-card"><span class="metric-label">쿠폰 발급 대상</span><div class="metric-value">4<span class="metric-unit">명</span></div></article></div>
+        <div class="panel"><div class="panel-heading"><div><p class="eyebrow">CUSTOMER NOTES</p><h3>고객 히스토리</h3></div><span class="muted">데모 고객 정보</span></div><div id="customerList" class="customer-list"></div></div>
+        <p class="privacy-note">고객 식별 정보는 플랫폼에서 적법하게 제공받은 범위에서만 사용하세요. 실제 고객 데이터 연동 전 개인정보 처리방침과 보관 기간을 설정해야 합니다.</p>
+      </section>
+
+      <section class="page" id="page-analytics">
+        <div class="page-heading simple"><div><p class="eyebrow">STORE INSIGHTS</p><h1>매장 분석</h1><p class="subheading">리뷰 속 반복되는 칭찬과 불편을 한눈에 확인하세요.</p></div><span class="period-pill">최근 30일 · 샘플</span></div>
+        <div class="metric-grid"><article class="metric-card"><span class="metric-label">긍정 리뷰 비율</span><div class="metric-value">78<span class="metric-unit">%</span></div><small class="positive">긍정 반응 우세</small></article><article class="metric-card"><span class="metric-label">평균 평점</span><div class="metric-value">4.7</div><small class="positive">+0.1</small></article><article class="metric-card"><span class="metric-label">반복 불만 키워드</span><div class="metric-value">3<span class="metric-unit">개</span></div><small class="muted">개선 확인 필요</small></article><article class="metric-card"><span class="metric-label">답글 작성률</span><div class="metric-value">92<span class="metric-unit">%</span></div><small class="positive">목표 90% 달성</small></article></div>
+        <div class="analysis-grid"><section class="panel"><div class="panel-heading"><div><p class="eyebrow">POSITIVE KEYWORDS</p><h3>고객이 좋아한 점</h3></div></div><div class="keyword-list"><span>맛있어요 <b>42</b></span><span>친절해요 <b>31</b></span><span>양이 많아요 <b>18</b></span><span>재방문할게요 <b>16</b></span></div></section><section class="panel"><div class="panel-heading"><div><p class="eyebrow">NEEDS IMPROVEMENT</p><h3>개선이 필요한 점</h3></div></div><div class="keyword-list negative"><span>포장 불만 <b>12</b></span><span>배달 지연 <b>8</b></span><span>음식 온도 <b>5</b></span></div></section></div>
+        <section class="panel recommendation"><p class="eyebrow">NEXT BEST ACTION</p><h3>이번 주 추천 개선 행동</h3><p>포장 관련 불만이 반복되고 있습니다. 포장 용기 밀봉 상태와 소스 분리 여부를 우선 점검해 보세요.</p><button class="button button-dark" data-page="tasks">개선 과제로 등록</button></section>
+      </section>
+
+      <section class="page" id="page-tasks">
+        <div class="page-heading simple"><div><p class="eyebrow">ACTION TRACKER</p><h1>개선 과제</h1><p class="subheading">발견한 문제를 실행 가능한 업무로 바꾸고 완료까지 추적하세요.</p></div><button class="button button-dark" id="addTaskBtn">+ 과제 추가</button></div>
+        <div class="task-summary"><span><b id="taskDone">1</b>개 완료</span><span><b id="taskOpen">2</b>개 진행 중</span></div><div id="taskList" class="task-list"></div>
+      </section>
+
+      <section class="page" id="page-assistant">
+        <div class="page-heading simple"><div><p class="eyebrow">OWNER'S AI ASSISTANT</p><h1>AI 사장님 상담 비서</h1><p class="subheading">매장 리뷰에 대해 편하게 질문해 보세요.</p></div></div>
+        <div class="chat-wrap panel"><div class="chat-intro"><span class="ai-avatar">✳</span><div><b>사장님 AI 비서</b><small>샘플 리뷰 데이터 기반 데모 상담</small></div></div><div id="chatMessages" class="chat-messages"><div class="chat-bubble ai">안녕하세요, 사장님. 리뷰에서 궁금한 점을 물어보세요.<br>예: “요즘 고객 불만이 뭐야?”</div></div><div class="suggestions"><button class="suggestion">요즘 불만이 뭐야?</button><button class="suggestion">우리 가게 장점은?</button><button class="suggestion">이번 주 개선할 점 알려줘</button></div><form id="chatForm" class="chat-input"><input id="chatInput" placeholder="매장에 대해 질문해 보세요." autocomplete="off"><button class="button button-dark" type="submit">질문하기</button></form></div>
+      </section>
+
+      <section class="page" id="page-sns">
+        <div class="page-heading simple"><div><p class="eyebrow">OPTIONAL PREMIUM</p><h1>SNS 마케팅</h1><p class="subheading">리뷰와 매장 소식을 SNS 콘텐츠로 만들어 보세요.</p></div><span class="pro-tag">ADD-ON</span></div>
+        <div class="sns-plan"><div><p class="eyebrow">AI SOCIAL MANAGER</p><h2>매장 홍보도 가볍게.</h2><p>인스타그램과 스레드에 어울리는 콘텐츠를 작성하고 게시 일정을 관리하세요.</p><b class="plan-price">월 +9,900원 <small>예상 요금</small></b></div><div class="sns-icons"><span>◎</span><span>@</span></div></div>
+        <div class="sns-grid"><section class="panel"><div class="panel-heading"><h3>콘텐츠 만들기</h3><span class="muted">AI 초안</span></div><label class="field-label" for="snsPlatform">게시 채널</label><select id="snsPlatform"><option>인스타그램</option><option>스레드</option></select><label class="field-label" for="snsTopic">홍보 주제</label><input id="snsTopic" placeholder="예: 신메뉴 출시, 오늘의 인기 메뉴"><label class="field-label" for="snsTone">말투</label><select id="snsTone"><option>친근하고 진솔하게</option><option>감각적이고 짧게</option><option>정중하고 전문적으로</option></select><button class="button button-dark full" id="generateSns">AI 콘텐츠 초안 만들기</button></section><section class="panel"><div class="panel-heading"><h3>콘텐츠 미리보기</h3><span class="muted">수정 가능</span></div><textarea id="snsOutput" class="sns-output" placeholder="생성한 콘텐츠가 여기에 표시됩니다. 직접 수정할 수도 있어요."></textarea><div class="button-row"><button class="button button-outline" id="copySns">복사하기</button><button class="button button-dark" id="saveSns">캘린더에 저장</button></div></section></div>
+        <section class="panel"><div class="panel-heading"><h3>콘텐츠 캘린더</h3><span class="muted">저장한 초안</span></div><div id="snsCalendar" class="sns-calendar"><p class="empty-state">아직 저장된 콘텐츠가 없습니다.</p></div></section>
+        <p class="privacy-note">현재 SNS 화면은 콘텐츠 초안·일정 관리 데모입니다. 실제 계정 연결, 예약 게시 및 성과 조회는 Meta 개발자 앱 등록, 권한 심사, 계정 인증이 완료되어야 활성화됩니다.</p>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="page-heading simple"><div><p class="eyebrow">PREFERENCES</p><h1>설정</h1><p class="subheading">매장 정보와 서비스 환경을 관리하세요.</p></div></div>
+        <div class="panel settings-panel"><h3>매장 정보</h3><label class="field-label" for="storeNameInput">매장명</label><input id="storeNameInput" value="우리동네 김밥집"><label class="field-label" for="ownerNameInput">사장님 호칭</label><input id="ownerNameInput" value="사장님"><button class="button button-dark" id="saveSettings">저장하기</button></div>
+        <div class="panel settings-panel"><h3>요금제 안내</h3><div class="setting-plan"><span>Basic</span><b>월 7,900원</b></div><div class="setting-plan"><span>Standard</span><b>월 12,900원</b></div><div class="setting-plan"><span>SNS 추가 구독</span><b>월 +9,900원</b></div><p class="muted small">표시 금액은 초기 기획용 가격 가설입니다. 현재 결제는 연결되어 있지 않습니다.</p></div>
+        <div class="panel settings-panel"><h3>데이터 관리</h3><p class="muted">이 데모는 브라우저의 로컬 저장소에 데이터를 저장합니다. 브라우저 데이터 삭제 시 데모 데이터도 삭제됩니다.</p><button class="button button-outline" id="resetDemo">샘플 데이터 초기화</button></div>
+      </section>
+      <footer class="footer">SAJANG AI STORE MANAGER <span>사장님의 시간은 장사에, 매장 관리는 AI에게.</span></footer>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="모바일 메뉴"><button class="active" data-page="dashboard"><i>⌂</i><span>홈</span></button><button data-page="reviews"><i>▤</i><span>리뷰</span></button><button data-page="customers"><i>♙</i><span>고객</span></button><button data-page="assistant"><i>✳</i><span>AI 상담</span></button><button data-page="settings"><i>⚙</i><span>설정</span></button></nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="appDialog" class="app-dialog"><form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form><div id="dialogContent"></div></dialog>
+  <script src="/app.js" defer></script>
+</body>
+</html>
